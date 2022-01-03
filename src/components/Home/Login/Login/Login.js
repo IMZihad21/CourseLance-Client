@@ -1,9 +1,9 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { Link, useNavigate, useLocation } from "react-router-dom";
-import useFirebase from "../../../../hooks/useFirebase";
-const Login = () => {
-  const { handleSignInUsingGoogle, logInUser } = useFirebase();
+import { useNavigate, useLocation } from "react-router-dom";
+import useAuth from "../../../../hooks/useAuth";
+const Login = ({ setLogIn }) => {
+  const { handleSignInUsingGoogle, logInUser } = useAuth();
   const location = useLocation();
   const uri = location.state?.from || "/";
   const history = useNavigate();
@@ -27,12 +27,12 @@ const Login = () => {
           <h1 className="text-center text-3xl font-medium			">Login</h1>
           <p className="my-4 text-sm text-gray-500	">
             Don't have an account yet?
-            <Link
-              to="/register"
+            <span
+              onClick={() => setLogIn(false)}
               className="underline underline-offset-1 cursor-pointer ml-2 text-black	"
             >
               Sign Up for Free
-            </Link>
+            </span>
           </p>
           <p className="text-gray-700 text-sm">USERNAME OR EMAIL ADDRESS *</p>
           <input
