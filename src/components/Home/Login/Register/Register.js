@@ -1,10 +1,10 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
-import { Link,useLocation,useNavigate } from 'react-router-dom';
-import useFirebase from '../../../../hooks/useFirebase';
+import { useLocation,useNavigate } from 'react-router-dom';
+import useAuth from '../../../../hooks/useAuth';
 
-const Register = () => {
-    const { handleSignInUsingGoogle,createUser } = useFirebase();
+const Register = ({setLogIn}) => {
+    const { handleSignInUsingGoogle,createUser } = useAuth();
   const location = useLocation();
   const uri = location.state?.from || "/";
   const history = useNavigate();
@@ -28,9 +28,9 @@ const Register = () => {
               <h1 className="text-center text-3xl font-medium">Register</h1>
               <p  className="my-4 text-sm text-gray-500	">
               Already have an account?
-                <Link to='/login' className="underline underline-offset-1 cursor-pointer ml-2 text-black	">
+                <span onClick={()=> setLogIn(true)} className="underline underline-offset-1 cursor-pointer ml-2 text-black	">
                    Login
-                </Link>
+                </span>
               </p>
               <p className="text-gray-700 text-sm">NAME *</p>
               <input
