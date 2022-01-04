@@ -20,6 +20,7 @@ const Navbar = () => {
                             <NavLink className="nav-link py-4 active" to="/"><span className="nav-title fw-bold mx-2">Contact</span></NavLink>
                             <NavLink className="nav-link py-4 active" to="/"><span className="nav-title fw-bold mx-2">About</span></NavLink>
                             <NavLink className="nav-link py-4 active" to="/"><span className="nav-title fw-bold mx-2">Blogs</span></NavLink>
+                            <NavLink className="nav-link py-4 active" to="/dashboard"><span className="nav-title fw-bold mx-2">Dashboard</span></NavLink>
                         </div>
                     </div>
                 </div>
