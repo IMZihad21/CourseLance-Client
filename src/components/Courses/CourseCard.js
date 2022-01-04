@@ -18,7 +18,7 @@ const CourseCard = ({ product }) => {
                 <p className='mt-2 font-semibold'>{courseDesription.split(' ').slice(0, 10).toString().replace(/,/g, ' ') + '...'}</p>
             </div>
             <Link to={`/courses/${_id}`}>
-                <button className='bg-black mt-4 w-full text-white py-2'><i class="fas fa-cart-plus"></i> Details</button>
+                <button className='bg-black mt-4 w-full text-white py-2'>Details<i className="fas fa-arrow-right pl-4"></i></button>
             </Link>
         </div>
     )

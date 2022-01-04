@@ -16,7 +16,7 @@ const Navbar = () => {
                     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div className="navbar-nav text-end">
                             <NavLink className="nav-link py-4 active" to="/"><span className="nav-title fw-bold mx-2">Home</span></NavLink>
-                            <NavLink className="nav-link py-4 active" to="/"><span className="nav-title fw-bold mx-2">Courses</span></NavLink>
+                            <NavLink className="nav-link py-4 active" to="/courses"><span className="nav-title fw-bold mx-2">Courses</span></NavLink>
                             <NavLink className="nav-link py-4 active" to="/"><span className="nav-title fw-bold mx-2">Contact</span></NavLink>
                             <NavLink className="nav-link py-4 active" to="/"><span className="nav-title fw-bold mx-2">About</span></NavLink>
                             <NavLink className="nav-link py-4 active" to="/"><span className="nav-title fw-bold mx-2">Blogs</span></NavLink>

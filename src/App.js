@@ -6,10 +6,13 @@ import AuthProvider from './contexts/AuthProvider';
 import Profile from './components/Home/Profile/Profile';
 import CourseList from './components/Courses/CourseList';
 import CourseDetails from './components/Courses/CourseDetails';
+import Navbar from './components/Navbar/Navbar'
+import Footer from './components/Footer/Footer'
 
 function App() {
   return (
     <AuthProvider>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="authentication" element={<Authentication />} />
@@ -17,6 +20,7 @@ function App() {
         <Route path="/courses" element={<CourseList />} />
         <Route path="/courses/:courseId" element={<CourseDetails />} />
       </Routes>
+      <Footer />
     </AuthProvider>
   );
 }
