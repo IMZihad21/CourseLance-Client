@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-const CourseCard = ({ product }) => {
-    const { courseName, courseCover, courseRating, courseDesription, courseReviews, courseAuthor, courseItems, courseContents } = product;
+const CourseCard = ({ course }) => {
+    const { courseName, courseCover, courseRating, courseDesription, courseReviews, courseAuthor, courseItems, courseContents } = course;
     const _id = 1;
     return (
         <div className='bg-white shadow-xl pb-5 rounded-sm text-center'>
