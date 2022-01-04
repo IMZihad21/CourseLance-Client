@@ -20,6 +20,7 @@ const AddCourse = () => {
             courseContents: courseContents.split(',')
         }
         console.log(payload);
+        reset();
     };
     return (
         <div className='border px-20 my-5 shadow-md'>
