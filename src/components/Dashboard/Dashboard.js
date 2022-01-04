@@ -18,7 +18,7 @@ const Dashboard = () => {
                     </li>
                 </ul>
             </div>
-            <div className='px-5'>
+            <div className='px-5 grow'>
                 <Outlet />
                 <Routes>
                     <Route index={true} element={<Welcome />} />
