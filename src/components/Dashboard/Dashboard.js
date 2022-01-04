@@ -7,7 +7,7 @@ import Welcome from './Welcome'
 
 const Dashboard = () => {
     return (
-        <div className='min-h-[45vh] flex divide-x-4'>
+        <div className='min-h-[50vh] flex divide-x-4'>
             <div className='w-36 text-center'>
                 <ul>
                     <li className='py-2 font-semibold text-xl'>
