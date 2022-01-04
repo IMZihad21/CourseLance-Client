@@ -1,5 +1,7 @@
 import React from 'react'
-import { Link, Outlet, Route, Routes } from 'react-router-dom'
+import { Outlet, Route, Routes } from 'react-router-dom'
+import CustomLink from '../Utilities/CustomLink'
+import AddCourse from './AddCourse'
 import AllCourses from './AllCourses'
 import Welcome from './Welcome'
 
@@ -9,7 +11,10 @@ const Dashboard = () => {
             <div className='w-36 text-center'>
                 <ul>
                     <li className='py-2 font-semibold text-xl'>
-                        <Link to="allCourses">All Courses</Link>
+                        <CustomLink to="allCourses">All Courses</CustomLink>
+                    </li>
+                    <li className='py-2 font-semibold text-xl'>
+                        <CustomLink to="addCourses">Add Courses</CustomLink>
                     </li>
                 </ul>
             </div>
@@ -18,6 +23,7 @@ const Dashboard = () => {
                 <Routes>
                     <Route index={true} element={<Welcome />} />
                     <Route path="allCourses" element={<AllCourses />} />
+                    <Route path="addCourses" element={<AddCourse />} />
                 </Routes>
             </div>
         </div>
