@@ -8,6 +8,7 @@ import CourseList from './components/Courses/CourseList';
 import CourseDetails from './components/Courses/CourseDetails';
 import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
+import Dashboard from './components/Dashboard/Dashboard';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="profile" element={<Profile />} />
         <Route path="/courses" element={<CourseList />} />
         <Route path="/courses/:courseId" element={<CourseDetails />} />
+        <Route path="/dashboard/*" element={<Dashboard />} />
       </Routes>
       <Footer />
     </AuthProvider>

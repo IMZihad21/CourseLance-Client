@@ -10,7 +10,7 @@ const CourseList = () => {
             </div>
             <div className='mt-2 rounded-lg p-5 md:grid grid-cols-4 gap-3'>
                 {
-                    fakeArrayData.map(product => <CourseCard key={product._id} product={product} />)
+                    fakeArrayData.map((course, idx) => <CourseCard key={course._id} course={course} />)
                 }
             </div>
         </div>
