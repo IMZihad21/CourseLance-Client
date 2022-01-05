@@ -39,20 +39,20 @@ const CourseDetails = () => {
         )
     }
 
-    const { courseName, courseCover, courseRating, courseDesription, courseReviews, courseAuthor, courseItems, courseContents } = course;
+    const { courseName, courseCover, courseRating, courseDescription, courseReviews, courseAuthor, courseItems, courseContents } = course;
 
     return (
         <div className='my-10'>
             <div className='flex bg-black text-white px-44 rounded h-80'>
-                <div className='h-full'>
-                    <img className='h-full' src={courseCover} alt="" />
+                <div className='h-full w-2/6'>
+                    <img className='h-full w-full' src={courseCover} alt="" />
                 </div>
-                <div className='ml-20 my-auto space-y-3'>
+                <div className='ml-20 w-4/6 my-auto space-y-3'>
                     <h1 className='text-5xl font-bold'>{courseName}</h1>
-                    <p className='text-md'>{courseDesription.substring(0, 100) + "..."}</p>
+                    <p className='text-md h-12 overflow-hidden'>{courseDescription}</p>
                     <div className='flex space-x-5' >
                         <RatingView ratingValue={courseRating} />
-                        <p className='text-sm my-auto'>(  {courseReviews.length} Ratings  )</p>
+                        <p className='text-sm my-auto'>(  {courseReviews?.length} Ratings  )</p>
                     </div>
                     <p className='text-sm'>Created by <span className='font-semibold'>{courseAuthor}</span></p>
                 </div>
@@ -79,13 +79,13 @@ const CourseDetails = () => {
             </div>
             <div className='mt-10 mx-44'>
                 <h1 className='text-2xl font-semibold'>Description</h1>
-                <p className='mt-5'>{courseDesription}</p>
+                <p className='mt-5'>{courseDescription}</p>
             </div>
             <div className='mt-10 mx-44'>
                 <h1 className='text-2xl font-semibold'>Course Reviews</h1>
                 <div className='grid grid-cols-3 gap-4 mt-5'>
                     {
-                        courseReviews.map((review, idx) => <div key={idx} className='border shadow-md rounded text-center'>
+                        courseReviews?.map((review, idx) => <div key={idx} className='border shadow-md rounded text-center'>
                             <h1 className='text-xl font-bold mb-2'>{review.reviewer}</h1>
                             <RatingView ratingValue={review.rating} />
                             <p className='text-lg my-2'>{review.review}</p>
