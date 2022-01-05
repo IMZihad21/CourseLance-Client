@@ -1,5 +1,6 @@
 import React from 'react'
 import { useForm } from 'react-hook-form';
+import axios from 'axios'
 
 const AddCourse = () => {
     const { register, handleSubmit, reset } = useForm();
@@ -13,14 +14,23 @@ const AddCourse = () => {
         const payload = {
             courseName,
             courseCover,
-            courseRating: 0,
+            courseRating: 3,
             courseDescription,
             courseAuthor,
+            courseReview: [],
             courseItems: courseItems.split(','),
             courseContents: courseContents.split(',')
         }
         console.log(payload);
-        reset();
+        axios.post('https://courselance.herokuapp.com/courses', payload)
+            .then((response) => {
+                if (response.data.acknowledged) {
+                    alert('Submitted Course Succesfully!');
+                    reset();
+                } else {
+                    alert("Error :: Failed to submit!")
+                };
+            });
     };
     return (
         <div className='border px-20 my-5 shadow-md'>
