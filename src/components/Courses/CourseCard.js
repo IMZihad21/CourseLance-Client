@@ -14,7 +14,7 @@ const CourseCard = ({ course }) => {
                     <p>{courseContents.length * 50} Minutes</p>
                 </div>
                 <h1 className='text-2xl font-bold mt-2 text-black'>{courseName}</h1>
-                <p className='mt-2 font-semibold'>{courseDesription.split(' ').slice(0, 10).toString().replace(/,/g, ' ') + '...'}</p>
+                <p className='mt-2 font-semibold h-12 overflow-hidden'>{courseDesription}</p>
             </div>
             <Link to={`/courses/${_id}`}>
                 <button className='bg-black mt-4 w-full text-white py-2'>Details<i className="fas fa-arrow-right pl-4"></i></button>
