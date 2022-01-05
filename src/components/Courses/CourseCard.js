@@ -2,8 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 
 const CourseCard = ({ course }) => {
-    const { courseName, courseCover, courseRating, courseDesription, courseReviews, courseAuthor, courseItems, courseContents } = course;
-    const _id = 1;
+    const { _id, courseName, courseCover, courseDesription, courseContents } = course;
     return (
         <div className='bg-white shadow-xl pb-5 rounded-sm text-center'>
             <div className='w-full h-56 mx-auto'>
