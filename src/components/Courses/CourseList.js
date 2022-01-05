@@ -1,8 +1,17 @@
 import React from 'react';
 import CourseCard from './CourseCard';
-import { fakeArrayData } from '../../fakeData'
+import axios from 'axios'
 
 const CourseList = () => {
+    const [ courses, setCourses ] = React.useState([]);
+    React.useEffect(() => {
+        axios.get('https://courselance.herokuapp.com/courses')
+            .then((result) => {
+                setCourses(result.data);
+            }).catch((err) => {
+                console.log(err.response);
+            });
+    }, [])
     return (
         <div className='mt-5'>
             <div>
@@ -10,7 +19,7 @@ const CourseList = () => {
             </div>
             <div className='mt-2 rounded-lg p-5 md:grid grid-cols-4 gap-3'>
                 {
-                    fakeArrayData.map((course, idx) => <CourseCard key={course._id} course={course} />)
+                    courses.map((course, idx) => <CourseCard key={course._id} course={course} />)
                 }
             </div>
         </div>
