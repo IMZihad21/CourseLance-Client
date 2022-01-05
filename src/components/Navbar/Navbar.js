@@ -24,7 +24,7 @@ const Navbar = () => {
                             {
                                 user.email && <NavLink className="nav-link py-4 active" to="/dashboard"><span className="nav-title fw-bold mx-2">Dashboard</span></NavLink>
                             }
-                            <NavLink className="nav-link py-4 active" to="/authentication"><span className="nav-title fw-bold mx-2">User</span></NavLink>
+                            <NavLink className="nav-link py-4 active" to="/authentication"><span className="nav-title fw-bold mx-2">{user.email ? 'Profile' : 'Login/Register'}</span></NavLink>
                         </div>
                     </div>
                 </div>
