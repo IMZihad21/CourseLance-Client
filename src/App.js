@@ -3,7 +3,6 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './components/Home/Home';
 import Authentication from './components/Authentication/Authentication'
 import AuthProvider from './contexts/AuthProvider';
-import Profile from './components/Home/Profile/Profile';
 import CourseList from './components/Courses/CourseList';
 import CourseDetails from './components/Courses/CourseDetails';
 import Navbar from './components/Navbar/Navbar'
@@ -13,6 +12,7 @@ import Blogs from './components/Blogs/Blogs';
 import Contact from './components/Contact/Contact';
 import Dashboard from './components/Dashboard/Dashboard';
 import About from './components/About/About';
+import PrivateRoute from './components/Home/Login/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -24,11 +24,14 @@ function App() {
         <Route path="/details/:blogId" element={<BlogDetails />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
-        <Route path="authentication" element={<Authentication />} />
-        <Route path="profile" element={<Profile />} />
+        <Route path="/authentication" element={<Authentication />} />
         <Route path="/courses" element={<CourseList />} />
         <Route path="/courses/:courseId" element={<CourseDetails />} />
-        <Route path="/dashboard/*" element={<Dashboard />} />
+        <Route path="/dashboard/*" element={
+          <PrivateRoute>
+            <Dashboard />
+          </PrivateRoute>
+        } />
       </Routes>
       <Footer />
     </AuthProvider>

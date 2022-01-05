@@ -1,8 +1,10 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
 import './Navbar.css';
 
 const Navbar = () => {
+    const { user } = useAuth();
     return (
         <nav className="navbar navbar-expand-md navbar-dark bg-dark sticky-top py-0">
             <div className="container d-flex justify-content-between">
@@ -19,7 +21,10 @@ const Navbar = () => {
                             <NavLink className="nav-link py-4 active" to="/blogs"><span className="nav-title fw-bold mx-2">Blogs</span></NavLink>
                             <NavLink className="nav-link py-4 active" to="/contact"><span className="nav-title fw-bold mx-2">Contact</span></NavLink>
                             <NavLink className="nav-link py-4 active" to="/about"><span className="nav-title fw-bold mx-2">About</span></NavLink>
-                            <NavLink className="nav-link py-4 active" to="/dashboard"><span className="nav-title fw-bold mx-2">Dashboard</span></NavLink>
+                            {
+                                user.email && <NavLink className="nav-link py-4 active" to="/dashboard"><span className="nav-title fw-bold mx-2">Dashboard</span></NavLink>
+                            }
+                            <NavLink className="nav-link py-4 active" to="/authentication"><span className="nav-title fw-bold mx-2">User</span></NavLink>
                         </div>
                     </div>
                 </div>

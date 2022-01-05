@@ -1,15 +1,20 @@
 import React, { useState } from 'react'
+import useAuth from '../../hooks/useAuth';
 import Login from '../Home/Login/Login/Login'
 import Register from '../Home/Login/Register/Register'
+import Profile from '../Home/Profile/Profile';
 
-const Authentication = () =>{ 
-    const [logIn,setLogIn] = useState(false);
+const Authentication = () => {
+    const { user } = useAuth();
+    const [ logIn, setLogIn ] = useState(false);
     return (
-        <div>   
+        <div className='mb-5 min-h-[230px]'>
             {
-                logIn === true ?
-                <Login setLogIn={setLogIn} /> :
-                <Register setLogIn={setLogIn} />
+                user.email ?
+                    <Profile /> :
+                    logIn === true ?
+                        <Login setLogIn={setLogIn} /> :
+                        <Register setLogIn={setLogIn} />
             }
         </div>
     )
