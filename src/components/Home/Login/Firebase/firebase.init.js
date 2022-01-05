@@ -1,6 +1,9 @@
 import { initializeApp } from "firebase/app";
-import firebaseConfig from '../Firebase/firebase.config'
-const initializeFirebase = ()=>{
+
+const config = process.env.REACT_APP_FIREBASE_CONFIG;
+const firebaseConfig = JSON.parse(config);
+
+const initializeFirebase = () => {
     initializeApp(firebaseConfig)
 }
 export default initializeFirebase;
