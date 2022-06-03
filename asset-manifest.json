@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/CourseLance-Client/static/css/main.d2ca9310.css",
+    "main.js": "/CourseLance-Client/static/js/main.87db9256.js",
+    "static/js/787.f2dcfad2.chunk.js": "/CourseLance-Client/static/js/787.f2dcfad2.chunk.js",
+    "static/media/about3.jpg": "/CourseLance-Client/static/media/about3.bb6ebbd05cc01dc306ac.jpg",
+    "static/media/banner_img.png": "/CourseLance-Client/static/media/banner_img.68cfe9e101deacbb019d.png",
+    "static/media/about2.jpeg": "/CourseLance-Client/static/media/about2.c5c883c51745d1a768d6.jpeg",
+    "static/media/about.jpeg": "/CourseLance-Client/static/media/about.1d9c07a647a935749009.jpeg",
+    "static/media/illustration.png": "/CourseLance-Client/static/media/illustration.b912f8ac52b254a23d70.png",
+    "index.html": "/CourseLance-Client/index.html",
+    "main.d2ca9310.css.map": "/CourseLance-Client/static/css/main.d2ca9310.css.map",
+    "main.87db9256.js.map": "/CourseLance-Client/static/js/main.87db9256.js.map",
+    "787.f2dcfad2.chunk.js.map": "/CourseLance-Client/static/js/787.f2dcfad2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d2ca9310.css",
+    "static/js/main.87db9256.js"
+  ]
+}
