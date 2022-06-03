@@ -1,6 +1,7 @@
 {
   "name": "courselance",
   "version": "0.1.0",
+  "homepage": "/CourseLance-Client",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
